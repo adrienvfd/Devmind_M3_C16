@@ -43,7 +43,6 @@ public class UserController {
     public Map<String, String> handleValidationExceptions(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
 
-
         MethodArgumentNotValidException e = (MethodArgumentNotValidException) ex;
         e.getBindingResult().getAllErrors().forEach((error) -> {
             String fieldName = ((FieldError) error).getField();
